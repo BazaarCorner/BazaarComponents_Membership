@@ -2,7 +2,12 @@
 
 return [
     'navigation' => [
-        'sidebar' => [
+        'admin'     => [
+            'bazaar-membership' => [
+                
+            ]            
+        ],
+        'sidebar'   => [
             'bazaar-membership' => [
                 'label' => 'My Account',
                 'route' =>  "#",
@@ -15,8 +20,7 @@ return [
                     ],
                     // Append Here
                 ]
-            ],
-            'bazaar-catalog'  => []
+            ]            
         ]
     ]
 ];

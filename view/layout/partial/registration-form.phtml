@@ -1,0 +1,72 @@
+<!-- TODO: use form helper -->
+<div class="container-fluid form-holder">
+    <form method="post" action="<?=$this->url('member/registration')?>">
+        <div class="row-fluid"><span class="title">Register As:</span></div>
+        <em class="text-muted" style="font-size: 11px;">
+            * All input fields are required
+        </em>
+        <div class="divider"><hr><br></div>
+        <div class="form-group">
+            <input class="form-control"
+                   type="text"
+                   placeholder="username"
+                   name="username">
+        </div>
+        <div class="form-group">
+            <input class="form-control"
+                   type="password"
+                   placeholder="password"
+                   name="password">
+        </div>
+        <div class="form-group">
+            <input class="form-control"
+                   type="password"
+                   placeholder="confirmation: re-type password"
+                   name="password_confirmation">
+        </div>
+        <div class="form-group">
+            <input class="form-control"
+                   type="email"
+                   placeholder="email address"
+                   name="email">
+        </div>
+        <em class="text-muted" style="font-size: 11px;">
+            Kindly ensure your email is up-to-date and accessible to receive
+            updates and promotions.
+        </em>
+        <br><br>
+        <div class="row">
+            <div class="col-md-8">
+                <span class="pull-left" style="font-weight: bold;">
+                    Agree with our 
+                    <a href="<?=$this->url('terms')?>#buyer" target="_blank">
+                        Terms
+                    </a>?
+                </span>
+                <br> <!-- <br> required to add separation-->
+                <div class="form-group">
+                    <input class="checkbox checkbox-inline"
+                           type="checkbox"
+                           value="1"
+                           name="agreed">
+                    <span>Yes, I agree.</span>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group">
+                    <input class="btn btn-danger pull-right"
+                           type="submit"
+                           value="Join Bazaar!">
+                </div>
+            </div>                        
+        </div>
+        <em class="text-muted" style="font-size: 11px;">
+            ** We value your information. Read more about our
+            <a href="<?=$this->url('policy')?>" class="text-capitalize" target="_blank">
+                privacy policy
+            </a>
+        </em>
+    </form>
+</div>
+
+<br> <!-- <br> required to add separation-->

@@ -1,0 +1,38 @@
+<!-- TODO: use form helper -->
+<div class="container-fluid form-holder">
+    <form method="POST" action="<?=$this->url('member/login')?>">                   
+        <div class="row-fluid"><span class="title">Sign As:</span></div>
+        <div class="divider"><hr><br></div>
+        <div class="form-group">
+            <input class="form-control" 
+                   type="text" 
+                   placeholder="username" 
+                   name="username">
+        </div>
+        <div class="form-group">
+            <input class="form-control" 
+                   type="password" 
+                   placeholder="password" 
+                   name="password">
+        </div>
+        <div class="row">
+            <div class="col-md-8">
+                <span class="pull-left text-capitalize"
+                      style="font-weight: bold;">
+                    Forgot your password?
+                </span>
+                <br>
+                <a href="#">Click here to reset your password</a>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group">
+                    <input class="btn btn-danger pull-right"
+                           type="submit"
+                           value="Sign In">
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
+<br> <!-- <br> required to add separation-->
