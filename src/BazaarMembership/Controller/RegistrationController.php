@@ -39,6 +39,9 @@ class RegistrationController extends AbstractActionController
 {
     public function registerAction()
     {
+        // Override layout to main layout
+        $this->layout('layout/layout');
+        
         $request = $this->getRequest();
         $post = $request->getPost();        
         

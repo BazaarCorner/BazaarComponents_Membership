@@ -36,17 +36,20 @@ use Zend\View\Model\ViewModel;
  * @author Gab Amba <gamba@gabbydgab.com>
  */
 class LoginController extends AbstractActionController
-{
+{    
     public function loginAction()
     {
+        // Override member/layout to site's main layout
+        $this->layout('layout/layout');
+        
         $request = $this->getRequest();
         $post = $request->getPost();
         
         if (!$request->isPost()) {
             // MUST RETURN SOMETHING
-            return;
+            return new ViewModel();
         }
         
-        var_dump($request->getPost()); exit;
+        $this->redirect()->toRoute('member/account');
     }
 }

@@ -26,22 +26,13 @@
 
 namespace BazaarMembership;
 
-use Zend\ModuleManager\Feature\AutoloaderProviderInterface;
-use Zend\ModuleManager\Feature\ControllerProviderInterface;
-use Zend\ModuleManager\Feature\ServiceProviderInterface;
-use Zend\ModuleManager\Feature\ConfigProviderInterface;
-
 /**
  * BazaarMembership\Module
  *
  * @package BazaarMembership
  * @author Gab Amba <gamba@gabbydgab.com>
  */
-class Module implements 
-    AutoloaderProviderInterface,
-    ServiceProviderInterface,
-    ConfigProviderInterface,
-    ControllerProviderInterface
+class Module
 {
     public function getConfig()
     {
@@ -49,6 +40,7 @@ class Module implements
         $configFiles = [
             'module.config.php',
             'routes.config.php',
+            'navigation.config.php',
         ];
         
         foreach ($configFiles as $configFile) {
