@@ -28,6 +28,7 @@ namespace BazaarMembership\Controller;
 
 use Zend\Mvc\Controller\AbstractActionController;
 use Zend\View\Model\ViewModel;
+use Zend\Http\Response;
 
 /**
  * BazaarMembership\Controller\IndexController
@@ -39,7 +40,14 @@ class IndexController extends AbstractActionController
 {
     public function indexAction()
     {
-        return new ViewModel();
+        if (!$this->memberAuthentication()->hasIdentity()){
+            $this->redirect()->toRoute('member/login')->setStatusCode(Response::STATUS_CODE_401);
+        }
+        
+        $member = new \stdClass();
+        $member->username = 'gabbydgab';
+        
+        return new ViewModel(['member' => $member]);
     }
     
     public function billingAction()
